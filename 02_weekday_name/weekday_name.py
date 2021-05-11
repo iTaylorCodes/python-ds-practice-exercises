@@ -16,5 +16,3 @@ def weekday_name(day_of_week):
     day_num = str(day_of_week)
     if day_num in days:
         return days[day_num]
-    else:
-        return None
