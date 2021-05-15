@@ -19,3 +19,19 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+
+    # First attempt
+
+    # return [[val for val in lst if fn(val)],[val for val in lst if not fn(val)]]
+
+    # Best Solution: so fn doesn't run twice on each val
+    true_list = []
+    false_list = []
+
+    for val in lst:
+        if fn(val):
+            true_list.append(val)
+        else:
+            false_list.append(val)
+
+    return [true_list, false_list]
