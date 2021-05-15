@@ -1,3 +1,6 @@
+from _typeshed import NoneType
+
+
 def mode(nums):
     """Return most-common number in list.
 
@@ -11,3 +14,14 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    counts = {}
+
+    for num in nums:
+        counts[num] = counts.get(num, 0) + 1
+
+    max_val = max(counts.values())
+
+    for (num, freq) in counts.items():
+        if freq == max_val:
+            return num
