@@ -16,3 +16,19 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+
+    # First Solution:
+
+    # for val in a[2]:
+    #     for valb in b[2]:
+    #         if val == valb:
+    #             return True
+
+    # return False
+
+    # Better Solution:
+
+    if set(a[2]) & set(b[2]):
+        return True
+    else:
+        return False
