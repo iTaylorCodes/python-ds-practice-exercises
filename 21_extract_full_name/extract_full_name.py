@@ -16,3 +16,4 @@ def extract_full_names(people):
     """
 
     return [f"{val['first']} {val['last']}" for val in people]
+    
