@@ -26,3 +26,4 @@ def sum_up_diagonals(matrix):
         total += matrix[i][-1 - i]
 
     return total
+    
